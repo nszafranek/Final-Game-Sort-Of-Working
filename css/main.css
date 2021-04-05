@@ -1,0 +1,138 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+html {
+  font-family: sans-serif;
+  background-image: url('../img/background.svg');
+  background-repeat: repeat;
+  background-position: 0%;
+  background-size: 200% 100%;
+  animation: SLIDEBG 5s linear infinite;
+}
+
+@keyframes SLIDEBG {
+  to {
+    background-position: 200% 0px;
+  }
+}
+
+
+.hero {
+  width: 180px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  margin-top: -25px;
+  background-repeat: no-repeat;
+  animation-name: heroSWIM, heroSPRITE;
+  animation-duration: 10s, 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1, infinite;
+}
+
+
+.shark {
+  width: 300px;
+  height: 100px;
+  background-color: grey;
+  background-size: contain;
+  position: fixed;
+  margin-top: -50px;
+  left: 100%;
+  top: 0;
+  background-image: url('../img/sharkagro.svg');
+  background-repeat: no-repeat;
+}
+#enemies {
+
+}
+#object {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  position: fixed;
+  margin-top: -50px;
+  left: 100%;
+  top: 0;
+}
+.hpFull {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background-repeat: no-repeat;
+  top: 0px;
+  right: 0px;
+  background-image: url('../img/4health.svg')
+}
+.hp1 {
+  position: absolute;
+  width: 25px;
+  height: 50px;
+  background-repeat: no-repeat;
+  top: 0px;
+  right: 0px
+  background-image: url('../img/1health.svg');
+}
+.hp2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  top: 0px;
+  right: 0px
+  background-image: url('../img/2health.svg');
+}
+.hp3 {
+  position: absolute;
+  width: 75px;
+  height: 50px;
+  background-repeat: no-repeat;
+  top: 0px;
+  right: 0px
+  background-image: url('../img/3health.svg');
+}
+.items {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  position: fixed;
+  margin-top: -50px;
+  left: 100%;
+  top: 0;
+}
+.gem {
+  background-image: url('../img/gem.svg');
+}
+.heart {
+    background-image: url('../img/heart.svg');
+}
+.score {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  font-weight: bold;
+}
+.coin {
+  background-image: url('../img/coin.svg');
+}
+
+.agressive {
+  background-color: red;
+  animation-duration: 5s;
+}
+.scared {
+  background-color: green;
+  animation-duration: 15s;
+}
+
+@keyframes heroSWIM {
+  to { left: -300px; }
+}
+
+@keyframes heroSPRITE {
+  from { background-image: url('../img/mermove1.svg');}
+  to { background-image: url('../img/mermove2.svg');}
+}
